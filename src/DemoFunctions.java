@@ -37,15 +37,29 @@ public class DemoFunctions {
         System.out.println("Length of array");
         System.out.println(len);
         System.out.println("Elements of the array");
-        System.out.println(numbers[0]);
-        System.out.println(numbers[1]);
-        System.out.println(numbers[2]);
+        for(int ele_num= 0; ele_num<len; ele_num++){
+            System.out.println(ele_num);
+        }
+
     }
 
 
-    public static char[][] createboard(){
+    public static char[][] createBoard(){
         char [][] board = new char[3][3];
+        for(int row=0; row<3; row++){
+            for(int col=0; col<3; col++){
+                board[row][col] = ' ';
+            }
+        }
         return board;
+    }
+
+    public static void displayBoard(char[][] board){
+        for(int row=0; row<3; row++) {
+            for (int col = 0; col < 3; col++) {
+                System.out.println("row:" + row + ", col:" + col + " | " + board[row][col]);
+            }
+        }
     }
 
 
@@ -61,7 +75,9 @@ public class DemoFunctions {
         displayArray(array_again);
 
 
-        char [][] board = createboard();
+        char [][] newBoard = createBoard();
+        displayBoard(newBoard);
 
     }
 }
+
