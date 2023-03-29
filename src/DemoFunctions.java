@@ -32,6 +32,23 @@ public class DemoFunctions {
     }
 
 
+    public static void displayArray(int[] numbers) {
+        int len = numbers.length;
+        System.out.println("Length of array");
+        System.out.println(len);
+        System.out.println("Elements of the array");
+        System.out.println(numbers[0]);
+        System.out.println(numbers[1]);
+        System.out.println(numbers[2]);
+    }
+
+
+    public static char[][] createboard(){
+        char [][] board = new char[3][3];
+        return board;
+    }
+
+
     public static void main(String[] args) {
         int number = 2;
         String username = getName(number);
@@ -42,6 +59,9 @@ public class DemoFunctions {
 
         displayArray(numbers);
         displayArray(array_again);
+
+
+        char [][] board = createboard();
 
     }
 }
