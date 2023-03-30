@@ -1,10 +1,8 @@
 import java.util.Scanner;
 
+public class Board {
 
-public class DemoFunctions {
-
-
-    public static char[][] createBoard(){
+    public char[][] createBoard(){
         char [][] board = new char[3][3];
         for(int row=0; row<3; row++){
             for(int col=0; col<3; col++){
@@ -14,15 +12,16 @@ public class DemoFunctions {
         return board;
     }
 
-    public static void displayBoard(char[][] board){
+    public void displayBoard(char[][] board){
         for(int row=0; row<3; row++) {
+            String row_str = "";
             for (int col = 0; col < 3; col++) {
-                System.out.println("row:" + row + ", col:" + col + " | " + board[row][col]);
+                System.out.println(row_str+= " | " + board[row][col]);
             }
         }
     }
 
-    public static void gameLoop(){
+    public void gameLoop(){
 
         char [][] newBoard = createBoard();
 
@@ -36,12 +35,11 @@ public class DemoFunctions {
             userAnswer = input.nextLine();
         }
 
-        //ask user if they want to display board
     }
 
 
     public static void main(String[] args) {
-        gameLoop();
+        Board testBoard = new Board();
+        testBoard.gameLoop();
     }
 }
-
