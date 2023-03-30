@@ -1,12 +1,9 @@
-import java.util.Scanner;
-
 public class Board {
 
     private char[][] board;
     private char  defaultValue = '*';
 
     public Board(){
-        System.out.println("initialising");
         createBoard();
     }
 
@@ -23,7 +20,7 @@ public class Board {
         }
     }
 
-    public char[][] createBoard(){
+    private char[][] createBoard(){
 
         board = new char[3][3];
         for(int row=0; row<3; row++){
@@ -35,24 +32,9 @@ public class Board {
     }
 
 
-    public void gameLoop(){
-
-        Scanner input = new Scanner(System.in);
-        System.out.println("Do you want to display the board (yes or No)");
-        String userAnswer = input.nextLine();
-
-        while(userAnswer.equals("yes")) {
-            displayBoard();
-            System.out.println("Do you want to display the board (yes or No)");
-            userAnswer = input.nextLine();
-        }
-
-    }
 
 
     public static void main(String[] args) {
         Board testBoard = new Board();
-        testBoard.displayBoard();
-        testBoard.gameLoop();
     }
 }
