@@ -24,8 +24,14 @@ public class TicTacToe {
     }
 
     public static void main(String[] args) {
-        TicTacToe tt = new TicTacToe();
-        tt.gameLoop();
+//        TicTacToe tt = new TicTacToe();
+//        tt.gameLoop();
+
+        User auser = new User();
+        auser.setUsername("Java");
+        auser.setMarker('O');
+        System.out.println(auser.getUsername());
+        System.out.println(auser.getMarker());
     }
 
 
